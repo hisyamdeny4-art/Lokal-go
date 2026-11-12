@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Lokal Go - Platform Agrikultur D2C &amp; Lelang Digital</title>
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>
+tailwind.config={theme:{extend:{colors:{brand:{50:'#f0fdf4',100:'#dcfce7',200:'#bbf7d0',400:'#4ade80',500:'#22c55e',600:'#16a34a',700:'#15803d',800:'#166534'},accent:{400:'#fbbf24',500:'#f59e0b',600:'#d97706'}},fontFamily:{sans:['Inter','system-ui','sans-serif']},
+keyframes:{bs:{'0%,100%':{transform:'translateY(-4%)'},'50%':{transform:'translateY(4%)'}},fi:{from:{opacity:0,transform:'scale(.96)'},to:{opacity:1,transform:'scale(1)'}}},
+animation:{'bounce-slow':'bs 3s ease-in-out infinite','fade-in':'fi .2s ease-out'}}}}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:6rem}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:#fff}
+nav.fixed{top:env(safe-area-inset-top,0px)}
+svg.ic{width:1em;height:1em;display:inline-block;vertical-align:-.125em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body class="bg-slate-50 font-sans text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
+
+<!-- NAVBAR -->
+<nav class="fixed left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-20">
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 bg-gradient-to-tr from-brand-600 to-brand-500 rounded-xl flex items-center justify-center text-white shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform"><i data-i="seedling" class="text-xl"></i></div>
+        <div>
+          <span class="text-2xl font-extrabold tracking-tight text-slate-900">Lokal<span class="text-brand-600">Go</span></span>
+          <span class="block text-[10px] uppercase tracking-widest text-emerald-600 font-semibold -mt-1">Agri-Ecosystem</span>
+        </div>
+      </a>
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+        <a href="#fitur" class="hover:text-brand-600 transition-colors">Fitur Utama</a>
+        <a href="#dampak" class="hover:text-brand-600 transition-colors">Dampak Sosial</a>
+        <a href="#katalog" class="hover:text-brand-600 transition-colors">Katalog D2C</a>
+        <a href="#pantau-harga" class="hover:text-brand-600 transition-colors">Pantau Harga</a>
+        <a href="#lelang" class="hover:text-brand-600 transition-colors">Lelang B2B</a>
+      </div>
+      <div class="hidden md:flex items-center gap-3">
+        <a href="#katalog" class="px-5 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm shadow-lg shadow-brand-600/25 hover:shadow-brand-600/40 transition-all hover:-translate-y-0.5"><i data-i="basket" class="mr-2"></i>Mulai Belanja</a>
+      </div>
+      <button id="mbtn" aria-label="Buka menu" class="md:hidden text-slate-600 hover:text-brand-600 p-2"><i data-i="bars" class="text-2xl"></i></button>
+    </div>
+  </div>
+  <div id="mmenu" class="hidden md:hidden bg-white border-b border-slate-100 px-4 pt-2 pb-6 space-y-3 shadow-xl">
+    <a href="#fitur" class="block py-2 text-slate-600 hover:text-brand-600 font-medium">Fitur Utama</a>
+    <a href="#dampak" class="block py-2 text-slate-600 hover:text-brand-600 font-medium">Dampak Sosial</a>
+    <a href="#katalog" class="block py-2 text-slate-600 hover:text-brand-600 font-medium">Katalog D2C</a>
+    <a href="#pantau-harga" class="block py-2 text-slate-600 hover:text-brand-600 font-medium">Pantau Harga</a>
+    <a href="#lelang" class="block py-2 text-slate-600 hover:text-brand-600 font-medium">Lelang B2B</a>
+    <a href="#katalog" class="block w-full text-center py-3 rounded-xl bg-brand-600 text-white font-semibold shadow-md">Mulai Belanja Sekarang</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-gradient-to-b from-emerald-50/50 via-white to-slate-50">
+  <div class="absolute top-1/4 -left-20 w-72 h-72 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute bottom-10 -right-20 w-96 h-96 bg-accent-500/10 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="grid lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-100 text-brand-800 text-xs sm:text-sm font-semibold border border-brand-200"><i data-i="leaf" class="text-brand-600"></i><span>Revolusi Rantai Pasok Agrikultur Indonesia</span></div>
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">Tanpa Tengkulak. <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 via-emerald-500 to-accent-500">Petani Sejahtera, Produk Segar.</span></h1>
+        <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">Lokal Go menghubungkan petani &amp; pekebun lokal langsung dengan Anda. Bebas biaya perantara, transparansi harga real-time, dan harga adil untuk semua.</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+          <a href="#katalog" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-base shadow-xl shadow-brand-600/30 hover:shadow-brand-600/50 transition-all hover:-translate-y-0.5 text-center flex items-center justify-center gap-2"><i data-i="cart"></i> Belanja Hasil Panen D2C</a>
+          <a href="#lelang" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-base shadow-xl shadow-slate-900/20 transition-all hover:-translate-y-0.5 text-center flex items-center justify-center gap-2 border border-slate-700"><i data-i="gavel" class="text-accent-500"></i> Lelang Partai Besar (B2B)</a>
+        </div>
+        <div class="grid grid-cols-3 gap-4 pt-8 border-t border-slate-200/80 max-w-lg mx-auto lg:mx-0">
+          <div><p class="text-2xl sm:text-3xl font-extrabold text-brand-600">0%</p><p class="text-xs sm:text-sm text-slate-500 font-medium">Fee Tengkulak</p></div>
+          <div><p class="text-2xl sm:text-3xl font-extrabold text-slate-900">+30%</p><p class="text-xs sm:text-sm text-slate-500 font-medium">Margin Petani</p></div>
+          <div><p class="text-2xl sm:text-3xl font-extrabold text-accent-500">100%</p><p class="text-xs sm:text-sm text-slate-500 font-medium">Hasil Panen Segar</p></div>
+        </div>
+      </div>
+      <div class="lg:col-span-5 relative">
+        <div class="relative mx-auto max-w-md lg:max-w-none">
+          <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-100">
+            <img id="heroimg" alt="Ilustrasi petani lokal memanen cabai" class="w-full h-[420px] object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex flex-col justify-end p-6 text-white">
+              <span class="bg-brand-500 text-xs font-bold px-2.5 py-1 rounded-md w-max mb-2">Petani Terverifikasi</span>
+              <h3 class="text-xl font-bold">Pak Mulyono - Desa Sukamaju</h3>
+              <p class="text-xs text-slate-200">Memanen 250kg Cabai Merah Keriting hari ini</p>
+            </div>
+          </div>
+          <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 hidden sm:flex items-center gap-3 animate-bounce-slow">
+            <div class="w-10 h-10 rounded-full bg-emerald-100 text-brand-600 flex items-center justify-center font-bold"><i data-i="check"></i></div>
+            <div><p class="text-xs text-slate-500 font-medium">Harga Langsung</p><p class="text-sm font-bold text-slate-900">Tanpa Perantara</p></div>
+          </div>
+          <div class="absolute -top-6 -right-6 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 hidden sm:flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-amber-100 text-accent-500 flex items-center justify-center font-bold"><i data-i="chart"></i></div>
+            <div><p class="text-xs text-slate-500 font-medium">Transparansi Pasar</p><p class="text-sm font-bold text-slate-900">Update Real-Time</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DAMPAK -->
+<section id="dampak" class="py-20 bg-slate-900 text-white relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-accent-500 font-bold uppercase tracking-wider text-xs sm:text-sm">Tujuan Mulia Lokal Go</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold mt-2 tracking-tight">Dampak Nyata dalam 3 Dimensi</h2>
+      <p class="text-slate-400 mt-3 text-base">Dirancang tidak hanya sebagai platform jual-beli, tetapi sebagai ekosistem sosial-ekonomi yang menjaga keberlanjutan masa depan desa.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8" id="dims"></div>
+  </div>
+</section>
+
+<!-- SOLUSI -->
+<section id="fitur" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-brand-600 font-bold uppercase tracking-wider text-xs sm:text-sm">Inovasi Ekosistem Terintegrasi</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2 tracking-tight">3 Solusi Utama Lokal Go</h2>
+      <p class="text-slate-600 mt-3 text-base">Inovasi model bisnis, teknologi, dan proses bisnis untuk mentransformasi sistem agrikultur modern.</p>
+    </div>
+    <div class="grid lg:grid-cols-3 gap-8" id="sols"></div>
+  </div>
+</section>
+
+<!-- KATALOG -->
+<section id="katalog" class="py-20 bg-slate-50 border-t border-slate-200/60">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+      <div>
+        <span class="text-brand-600 font-bold uppercase tracking-wider text-xs sm:text-sm">Pasar D2C Langsung Petani</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-1">Katalog Produk Segar</h2>
+      </div>
+      <div class="flex flex-wrap gap-2 mt-4 md:mt-0" id="filters"></div>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6" id="grid"></div>
+  </div>
+</section>
+
+<!-- PANTAU HARGA -->
+<section id="pantau-harga" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <span class="text-brand-600 font-bold uppercase tracking-wider text-xs sm:text-sm">Menghapus Asimetri Informasi</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-1">Pemantau Harga Pasar Real-Time</h2>
+      <p class="text-slate-600 mt-2 text-sm sm:text-base">Membandingkan harga beli tengkulak tradisional vs harga pasar acuan vs harga adil Lokal Go secara transparan.</p>
+    </div>
+    <div class="max-w-md mx-auto mb-8 relative">
+      <i data-i="search" class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
+      <input type="text" id="psearch" aria-label="Cari komoditas" placeholder="Cari komoditas (misal: Cabai, Bawang)..." class="w-full pl-11 pr-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent text-sm">
+    </div>
+    <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse min-w-[720px]">
+          <thead><tr class="bg-slate-50 border-b border-slate-200 text-xs font-bold uppercase text-slate-500 tracking-wider">
+            <th class="py-4 px-6">Komoditas</th><th class="py-4 px-6 text-red-600">Diterima Petani via Tengkulak</th><th class="py-4 px-6 text-slate-700">Harga Acuan Pasar</th><th class="py-4 px-6 text-brand-600 bg-emerald-50/50">Harga Fair Lokal Go</th><th class="py-4 px-6 text-center">Status Tren</th>
+          </tr></thead>
+          <tbody class="divide-y divide-slate-100 text-sm font-medium" id="prows"></tbody>
+        </table>
+      </div>
+    </div>
+    <p class="text-xs text-slate-400 text-center mt-4">Angka pada tabel adalah data simulasi untuk keperluan desain.</p>
+  </div>
+</section>
+
+<!-- DASHBOARD LIVE -->
+<section id="live" class="py-20 bg-[#f1e8d9]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-2xl mb-12">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Lihat harga hari ini, dan ikut menawar</h2>
+      <p class="text-slate-600 mt-3">Cuplikan dashboard harga dan lelang. Angka di bawah adalah simulasi untuk demo tampilan.</p>
+    </div>
+    <div class="grid lg:grid-cols-[1.25fr_.75fr] gap-6 items-start">
+      <div class="bg-white rounded-3xl border border-slate-200/80 p-6">
+        <div class="flex flex-wrap justify-between items-center gap-3 mb-3">
+          <h3 class="text-xl font-bold text-slate-900">Harga komoditas</h3>
+          <span class="inline-flex items-center gap-2 text-sm text-slate-500"><span class="w-2.5 h-2.5 rounded-full bg-brand-600 animate-pulse"></span>Diperbarui otomatis</span>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse min-w-[520px]">
+            <thead><tr class="text-sm text-slate-500 border-b border-slate-200"><th class="py-2 px-2 font-medium">Komoditas</th><th class="py-2 px-2 font-medium">Harga petani</th><th class="py-2 px-2 font-medium">Rata-rata pasar</th><th class="py-2 px-2 font-medium">Perubahan</th><th class="py-2 px-2 font-medium">Tren</th></tr></thead>
+            <tbody id="lrows" class="divide-y divide-slate-100"></tbody>
+          </table>
+        </div>
+        <p class="text-sm text-slate-500 mt-4">Harga per kg. Data simulasi untuk keperluan desain.</p>
+      </div>
+      <div class="bg-white rounded-3xl border border-slate-200/80 p-6 space-y-4">
+        <div class="flex justify-between items-center gap-2"><h3 class="text-xl font-bold text-slate-900">Lelang berjalan</h3><span class="px-3 py-1 rounded-full bg-brand-100 text-brand-700 text-sm font-semibold">Partai besar</span></div>
+        <p class="text-lg font-bold text-slate-900">2 ton tomat segar, Lembang</p>
+        <div><p class="text-sm text-slate-500">Tawaran tertinggi per kg</p><p id="lnow" class="text-4xl font-extrabold text-brand-700 tracking-tight">Rp 11.800</p></div>
+        <div class="grid grid-cols-3 gap-2 text-center text-xs text-slate-500">
+          <div class="bg-slate-50 border border-slate-200 rounded-xl py-2"><b id="l-h" class="block text-2xl text-slate-900">02</b>jam</div>
+          <div class="bg-slate-50 border border-slate-200 rounded-xl py-2"><b id="l-m" class="block text-2xl text-slate-900">14</b>menit</div>
+          <div class="bg-slate-50 border border-slate-200 rounded-xl py-2"><b id="l-s" class="block text-2xl text-slate-900">30</b>detik</div>
+        </div>
+        <ul id="lbids" class="space-y-1.5 text-sm text-slate-500"></ul>
+        <button id="lbtn" type="button" class="w-full py-3.5 rounded-full bg-brand-600 hover:bg-brand-700 text-white font-bold transition-colors">Tawar + Rp 100</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LELANG -->
+<section id="lelang" class="py-20 bg-slate-900 text-white relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+      <div>
+        <span class="text-accent-500 font-bold uppercase tracking-wider text-xs sm:text-sm"><i data-i="gavel" class="mr-1"></i> Penawaran Partai Besar B2B</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold mt-1">Platform Lelang Digital</h2>
+      </div>
+      <p class="text-slate-400 text-sm max-w-md mt-2 md:mt-0">Sistem penawaran transparan untuk supermarket, restoran, dan distributor tanpa rekayasa harga tengkulak.</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="auctions"></div>
+  </div>
+</section>
+
+<!-- DAMPAK: PORSI HARGA -->
+<section id="mengapa" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-2xl mb-12">
+      <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">Mengapa Lokal Go penting bagi desa dan dapur kita</h2>
+      <p class="text-slate-600 mt-4 text-lg">Sekitar 90% petani masih bergantung pada tengkulak. Ketika perantara hilang, hasilnya terasa di tiga sisi.</p>
+    </div>
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div id="share" class="bg-white rounded-3xl border border-slate-200 p-7 space-y-6">
+        <h3 class="text-xl font-bold text-slate-900">Porsi harga pasar yang diterima petani</h3>
+        <div><div class="flex justify-between text-sm text-slate-500 mb-1.5"><span>Lewat tengkulak</span><span>70–80%</span></div><div class="h-9 rounded-xl bg-slate-50 border border-slate-200 overflow-hidden"><div data-w="75" class="h-full w-0 rounded-xl bg-[#8a6a45] text-white text-sm font-semibold italic flex items-center justify-end pr-3 transition-all duration-[1400ms] ease-out">75%</div></div></div>
+        <div><div class="flex justify-between text-sm text-slate-500 mb-1.5"><span>Lewat Lokal Go</span><span>mendekati harga riil</span></div><div class="h-9 rounded-xl bg-slate-50 border border-slate-200 overflow-hidden"><div data-w="96" class="h-full w-0 rounded-xl bg-brand-600 text-white text-sm font-semibold italic flex items-center justify-end pr-3 transition-all duration-[1400ms] ease-out">±96%</div></div></div>
+        <p class="text-sm text-slate-500">Ilustrasi. Tengkulak juga mengambil fee sekitar 10% dan potongan biaya distribusi; di Lokal Go keduanya tidak ada.</p>
+      </div>
+      <div class="space-y-7">
+        <div class="flex gap-4"><div class="w-[52px] h-[52px] shrink-0 rounded-2xl bg-brand-100 text-brand-700 flex items-center justify-center text-2xl"><i data-i="users"></i></div><div><h3 class="text-xl font-bold text-slate-900">Sosial</h3><p class="text-slate-600">Petani tidak lagi terikat satu pembeli. Mereka bisa menolak harga rendah dan memilih siapa yang membeli panennya.</p></div></div>
+        <div class="flex gap-4"><div class="w-[52px] h-[52px] shrink-0 rounded-2xl bg-brand-100 text-brand-700 flex items-center justify-center text-2xl"><i data-i="coins"></i></div><div><h3 class="text-xl font-bold text-slate-900">Ekonomi</h3><p class="text-slate-600">Pendapatan petani naik karena potongan perantara hilang. Hak milik dan keputusan harga sepenuhnya di tangan petani.</p></div></div>
+        <div class="flex gap-4"><div class="w-[52px] h-[52px] shrink-0 rounded-2xl bg-brand-100 text-brand-700 flex items-center justify-center text-2xl"><i data-i="seedling"></i></div><div><h3 class="text-xl font-bold text-slate-900">Keberlanjutan</h3><p class="text-slate-600">Uang berputar di desa, petani punya modal untuk musim tanam berikutnya, dan pembeli mendapat produk segar dengan harga terbaik.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA GABUNG -->
+<section id="gabung" class="pb-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-brand-800 text-white rounded-[36px] px-6 py-10 sm:p-14 grid lg:grid-cols-2 gap-10 items-center">
+      <div><h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight mb-4">Panen Anda, harga Anda.</h2><p class="text-white/90 text-lg">Daftar sebagai petani untuk mulai menjual langsung, atau sebagai pembeli untuk mendapat produk segar dengan harga yang jelas.</p></div>
+      <div>
+        <div role="tablist" class="inline-flex gap-1.5 bg-white/15 p-1.5 rounded-full mb-4">
+          <button role="tab" id="jF" class="px-6 py-2.5 rounded-full font-semibold">Saya petani</button>
+          <button role="tab" id="jB" class="px-6 py-2.5 rounded-full font-semibold">Saya pembeli</button>
+        </div>
+        <div role="tabpanel" class="bg-white/10 rounded-3xl p-6">
+          <ul id="jpts" class="list-disc pl-5 space-y-2 mb-5 text-lg"></ul>
+          <a href="#kontak" id="jcta" class="inline-block px-7 py-3.5 rounded-full bg-white text-brand-800 font-bold hover:bg-brand-50 transition-colors">Daftar sebagai petani</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-4 gap-8 mb-8">
+      <div class="space-y-4">
+        <div class="flex items-center gap-3"><div class="w-10 h-10 bg-brand-600 rounded-xl flex items-center justify-center text-white"><i data-i="seedling"></i></div><span class="text-2xl font-extrabold text-white">Lokal<span class="text-brand-500">Go</span></span></div>
+        <p class="text-xs leading-relaxed">Mengembalikan daya tawar petani lokal, menghapus tengkulak, dan menyediakan produk agrikultur segar dengan harga adil.</p>
+      </div>
+      <div>
+        <h4 class="text-white font-bold text-sm mb-4">Navigasi</h4>
+        <ul class="space-y-2 text-xs">
+          <li><a href="#fitur" class="hover:text-brand-500 transition-colors">Fitur Utama</a></li>
+          <li><a href="#dampak" class="hover:text-brand-500 transition-colors">Dampak Sosial &amp; Ekonomi</a></li>
+          <li><a href="#katalog" class="hover:text-brand-500 transition-colors">Katalog D2C</a></li>
+          <li><a href="#pantau-harga" class="hover:text-brand-500 transition-colors">Pemantau Harga</a></li>
+          <li><a href="#lelang" class="hover:text-brand-500 transition-colors">Lelang B2B</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-bold text-sm mb-4">Kontak &amp; Kemitraan</h4>
+        <ul class="space-y-2 text-xs">
+          <li><i data-i="mail" class="mr-2"></i> kemitraan@lokalgo.id</li>
+          <li><i data-i="phone" class="mr-2"></i> +62 857-9340-5143</li>
+          <li><i data-i="pin" class="mr-2"></i> Bandung &amp; Jakarta, Indonesia</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-bold text-sm mb-4">Dukung Petani Lokal</h4>
+        <p class="text-xs mb-3">Dapatkan kabar panen segar langsung setiap minggunya.</p>
+        <div class="flex">
+          <input type="email" id="nlmail" aria-label="Email Anda" placeholder="Email Anda" class="px-3 py-2 bg-slate-900 border border-slate-800 rounded-l-lg text-xs text-white focus:outline-none w-full">
+          <button id="nlbtn" class="bg-brand-600 text-white px-3 py-2 rounded-r-lg text-xs font-bold hover:bg-brand-700 transition-colors">Kirim</button>
+        </div>
+      </div>
+    </div>
+    <div class="pt-8 border-t border-slate-900 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+      <p>© 2026 Lokal Go Platform. Seluruh Hak Cipta Dilindungi.</p>
+      <div class="flex gap-4"><a href="#" class="hover:text-slate-300">Kebijakan Privasi</a><a href="#" class="hover:text-slate-300">Syarat &amp; Ketentuan</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL BELI -->
+<div id="bm" class="fixed inset-0 z-[70] bg-slate-950/70 backdrop-blur-sm hidden items-center justify-center p-4">
+  <div class="bg-white rounded-2xl max-w-md w-full p-6 relative shadow-2xl animate-fade-in">
+    <button onclick="closeM('bm')" aria-label="Tutup" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600"><i data-i="x" class="text-xl"></i></button>
+    <div class="flex gap-4 items-center mb-4">
+      <img id="m-img" alt="" class="w-16 h-16 rounded-xl object-cover">
+      <div><h3 id="m-title" class="font-bold text-slate-900 text-base"></h3><p id="m-farmer" class="text-xs text-slate-500"></p><p id="m-price" class="text-brand-600 font-extrabold text-sm mt-1"></p></div>
+    </div>
+    <div class="space-y-3 border-t border-slate-100 pt-4">
+      <div><label for="m-qty" class="block text-xs font-bold text-slate-700 mb-1">Jumlah Pesanan (Kg)</label><input id="m-qty" type="number" value="1" min="1" class="w-full px-3 py-2 border rounded-xl text-sm focus:ring-2 focus:ring-brand-500 outline-none"></div>
+      <div><label for="m-addr" class="block text-xs font-bold text-slate-700 mb-1">Alamat Pengiriman</label><textarea id="m-addr" placeholder="Masukkan alamat lengkap..." class="w-full px-3 py-2 border rounded-xl text-sm focus:ring-2 focus:ring-brand-500 outline-none h-20"></textarea></div>
+      <button onclick="confirmOrder()" class="w-full py-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-sm transition-colors shadow-md">Konfirmasi Pembelian D2C</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL TAWAR -->
+<div id="bd" class="fixed inset-0 z-[70] bg-slate-950/70 backdrop-blur-sm hidden items-center justify-center p-4">
+  <div class="bg-slate-900 text-white rounded-2xl max-w-md w-full p-6 relative shadow-2xl border border-slate-800 animate-fade-in">
+    <button onclick="closeM('bd')" aria-label="Tutup" class="absolute top-4 right-4 text-slate-400 hover:text-white"><i data-i="x" class="text-xl"></i></button>
+    <h3 class="font-bold text-lg text-white mb-1"><i data-i="gavel" class="text-accent-500 mr-2"></i>Ajukan Penawaran Lelang</h3>
+    <p id="b-title" class="text-xs text-slate-400 mb-4"></p>
+    <div class="bg-slate-800 p-3 rounded-xl mb-4 border border-slate-700 text-xs flex justify-between"><span class="text-slate-400">Harga Tertinggi Saat Ini:</span><span id="b-cur" class="font-bold text-accent-400"></span></div>
+    <div class="space-y-4">
+      <div><label for="b-in" class="block text-xs font-bold text-slate-300 mb-1">Harga Penawaran Anda per Kg (Rp)</label><input type="number" id="b-in" placeholder="Masukkan harga lebih tinggi..." class="w-full px-3 py-2.5 bg-slate-950 border border-slate-700 rounded-xl text-sm text-white focus:outline-none focus:border-accent-500"><p id="b-err" class="text-xs text-red-400 mt-1 hidden"></p></div>
+      <button onclick="submitBid()" class="w-full py-3 rounded-xl bg-accent-500 hover:bg-accent-600 text-slate-950 font-extrabold text-sm transition-colors shadow-lg">Kirim Penawaran Resmi</button>
+    </div>
+  </div>
+</div>
+
+<div id="toast" class="fixed left-1/2 -translate-x-1/2 bottom-6 z-[80] bg-slate-900 text-white text-sm font-semibold px-5 py-3 rounded-xl shadow-2xl hidden"></div>
+
+<script>
+const IC={seedling:'<path d="M12 22V12"/><path d="M12 12C12 7 8 4 3 4c0 5 3 8 9 8z"/><path d="M12 15c0-4 3-6 8-6 0 4-3 7-8 7"/>',basket:'<path d="M5 11l4-7M19 11l-4-7M2 11h20l-2 9H4z"/><path d="M9 15v2M15 15v2M12 15v2"/>',bars:'<path d="M4 6h16M4 12h16M4 18h16"/>',leaf:'<path d="M11 20A7 7 0 0 1 4 13c0-6 6-9 16-9 0 10-3 16-9 16z"/><path d="M4 21c3-6 6-9 10-11"/>',cart:'<circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.5 12h11L21 7H6"/>',cartplus:'<circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.5 12h11L21 7H6M13 9v4M11 11h4"/>',gavel:'<path d="M14 4l6 6-3 3-6-6z"/><path d="M11 7l-7 7 3 3 7-7"/><path d="M3 21h10"/>',check:'<path d="M5 12l5 5L20 7"/>',chart:'<path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/>',users:'<circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.5 3-6 6-6s6 2.5 6 6"/><path d="M16 14c3 0 5 2 5 5"/>',coins:'<circle cx="12" cy="12" r="9"/><path d="M14.5 9.5c-.5-1-1.4-1.5-2.5-1.5-1.4 0-2.5.7-2.5 1.8s1 1.6 2.5 2 2.5.9 2.5 2-1.1 1.9-2.5 1.9c-1.2 0-2.1-.5-2.6-1.5M12 6v2m0 8v2"/>',cycle:'<path d="M21 12a9 9 0 0 1-15.5 6.2L3 16"/><path d="M3 12a9 9 0 0 1 15.5-6.2L21 8"/><path d="M3 21v-5h5M21 3v5h-5"/>',store:'<path d="M3 9l1.5-5h15L21 9"/><path d="M4 9v11h16V9"/><path d="M9 20v-6h6v6"/><path d="M3 9a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0"/>',quote:'<path d="M10 8H6a2 2 0 0 0-2 2v4h6v-4H6M20 8h-4a2 2 0 0 0-2 2v4h6v-4h-4"/>',pin:'<path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/>',search:'<circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/>',up:'<path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/>',down:'<path d="M3 7l6 6 4-4 8 8"/><path d="M15 17h6v-6"/>',lr:'<path d="M3 12h18M7 8l-4 4 4 4M17 8l4 4-4 4"/>',weight:'<path d="M6 8h12l2 13H4z"/><circle cx="12" cy="5" r="2"/>',user:'<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/>',clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',mail:'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>',phone:'<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/>',x:'<path d="M6 6l12 12M18 6L6 18"/>'};
+function icons(r){(r||document).querySelectorAll('i[data-i]').forEach(e=>{const s=document.createElementNS('http://www.w3.org/2000/svg','svg');s.setAttribute('viewBox','0 0 24 24');s.setAttribute('class','ic '+(e.className||''));s.setAttribute('aria-hidden','true');s.innerHTML=IC[e.dataset.i]||'';e.replaceWith(s)})}
+const ph=(e,a,b)=>'data:image/svg+xml,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="'+a+'"/><stop offset="1" stop-color="'+b+'"/></linearGradient></defs><rect width="400" height="300" fill="url(#g)"/><text x="200" y="185" font-size="120" text-anchor="middle">'+e+'</text></svg>');
+document.getElementById('heroimg').src='https://images.unsplash.com/photo-1595974482597-4b8da8879bc5?auto=format&fit=crop&w=800&q=80';
+
+const DIMS=[['users','Dimensi Sosial','brand-500','brand-500/10','text-brand-500','hover:border-brand-500/50','Memutus ketergantungan pada tengkulak yang menurut riset dialami hingga <strong>90% petani</strong> di lokasi studi.','Mengembalikan hak &amp; daya tawar petani atas hasil jerih payahnya sendiri (Akbar dkk., 2025).'],
+['coins','Dimensi Ekonomi','accent-500','accent-500/10','text-accent-500','hover:border-accent-500/50','Meningkatkan pendapatan petani mendekati harga pasar asli, dengan <strong>menghapus potongan fee tengkulak 10%</strong> &amp; rantai distribusi panjang.','Petani dapat memprediksi dan menghitung pendapatan modal musim tanam berikutnya secara akurat.'],
+['cycle','Keberlanjutan Desa','emerald-500','emerald-500/10','text-emerald-400','hover:border-emerald-500/50','Menjaga roda ekonomi desa tetap berputar secara konsisten sehingga pertanian tetap menjadi mata pencaharian utama yang menjanjikan.','Mewujudkan usaha tani yang tumbuh, stabil &amp; eksis hingga masa depan (Yuningsih dkk., 2022; Riyanti &amp; Nur Aini, 2022).']];
+document.getElementById('dims').innerHTML=DIMS.map((d,i)=>`<div class="bg-slate-800/80 rounded-2xl p-8 border border-slate-700/80 ${d[5]} transition-all hover:-translate-y-1 relative group"><div class="w-14 h-14 bg-${d[3]} ${d[4]} rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform"><i data-i="${d[0]}"></i></div><h3 class="text-xl font-bold mb-3 text-white">${i+1}. ${d[1]}</h3><p class="text-slate-300 text-sm leading-relaxed mb-4">${d[6]}</p><div class="pt-4 border-t border-slate-700 text-xs text-slate-400 italic"><i data-i="quote" class="mr-1 text-slate-500"></i> ${d[7]}</div></div>`).join('');
+
+const SOL=[['store','bg-brand-600 shadow-brand-600/20','text-brand-600','Model Bisnis Baru','1. Website Direct-to-Consumer (D2C)','Konsumen rumah tangga &amp; UMKM membeli langsung hasil panen dari petani. Menghapus sistem titip jual (<em>consignor-consignee</em>) tradisional yang selama ini merugikan petani jika barang tidak laku.'],
+['gavel','bg-accent-500 shadow-accent-500/20','text-accent-600','Proses Bisnis Adil','2. Platform Lelang Digital B2B','Sistem lelang terbuka untuk penjualan komoditas partai besar secara transparan &amp; kompetitif. Harga tidak lagi ditentukan secara sepihak oleh perantara.'],
+['chart','bg-slate-900 shadow-slate-900/20','text-slate-600','Inovasi Teknologi','3. Aplikasi Pemantau Harga Real-Time','Menampilkan tren &amp; acuan harga komoditas pasar secara terbuka. Menghapus asimetri informasi yang kerap dimanfaatkan untuk manipulasi harga di tingkat lokal.']];
+document.getElementById('sols').innerHTML=SOL.map(s=>`<div class="bg-slate-50 rounded-2xl p-8 border border-slate-200/80 hover:shadow-xl transition-all"><div class="w-12 h-12 ${s[1]} text-white rounded-xl flex items-center justify-center text-xl mb-6 shadow-md"><i data-i="${s[0]}"></i></div><span class="text-xs font-bold ${s[2]} uppercase tracking-wider">${s[3]}</span><h3 class="text-xl font-bold text-slate-900 mt-1 mb-3">${s[4]}</h3><p class="text-slate-600 text-sm leading-relaxed">${s[5]}</p></div>`).join('');
+
+const PR=[{n:'Cabai Merah Keriting Fresh',c:'bumbu',loc:'Garut, Jawa Barat',f:'Kelompok Tani Tani Mulya',p:32000,o:42000,b:'Panen Hari Ini',bc:'bg-brand-600',e:'🌶️',g:['#fecaca','#ef4444']},
+{n:'Tomat Beef Organik Segar',c:'sayur',loc:'Lembang, Bandung',f:'Pak Dani &amp; Mitra',p:14500,o:20000,b:'Organik',bc:'bg-brand-600',e:'🍅',g:['#fed7aa','#f87171']},
+{n:'Bawang Merah Brebes Super',c:'bumbu',loc:'Brebes, Jawa Tengah',f:'Poktan Sri Rejeki',p:28000,o:35000,b:'Grade A',bc:'bg-accent-500',e:'🧅',g:['#fde68a','#c084fc']},
+{n:'Kentang Granola Dieng',c:'sayur',loc:'Dieng, Wonosobo',f:'Pak Slamet',p:16000,o:22000,b:'Panen Baru',bc:'bg-brand-600',e:'🥔',g:['#fef3c7','#d6a15a']}];
+const IMG=['https://images.unsplash.com/photo-1588252303782-cb80119abd6d?auto=format&fit=crop&w=600&q=80','https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=600&q=80','https://images.unsplash.com/photo-1618512496248-a07fe83aa8cf?auto=format&fit=crop&w=600&q=80','https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&w=600&q=80'];
+const rp=n=>'Rp '+n.toLocaleString('id-ID');
+const FL=[['all','Semua'],['sayur','Sayur Mayur'],['bumbu','Bumbu Dapur'],['buah','Buah-Buahan']];
+const fbox=document.getElementById('filters'),grid=document.getElementById('grid');
+const ON='bg-brand-600 text-white shadow-md',OFF='bg-white text-slate-600 hover:bg-slate-100 border border-slate-200';
+fbox.innerHTML=FL.map((f,i)=>`<button data-f="${f[0]}" class="fbtn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold ${i?OFF:ON}">${f[1]}</button>`).join('');
+grid.innerHTML=PR.map((p,i)=>`<div class="pcard bg-white rounded-2xl overflow-hidden border border-slate-200/80 hover:shadow-xl transition-all duration-300 flex flex-col" data-c="${p.c}"><div class="relative h-48 overflow-hidden bg-slate-100"><img src="${IMG[i]}" alt="${p.n}" class="w-full h-full object-cover"><span class="absolute top-3 left-3 ${p.bc} text-white text-[11px] font-bold px-2.5 py-1 rounded-md">${p.b}</span></div><div class="p-5 flex-1 flex flex-col justify-between space-y-4"><div><div class="text-xs text-slate-400 font-medium mb-1"><i data-i="pin" class="mr-1"></i> ${p.loc}</div><h3 class="font-bold text-slate-900 text-base">${p.n}</h3><p class="text-xs text-slate-500 mt-1">Petani: ${p.f}</p></div><div><div class="flex items-baseline gap-2 mb-3"><span class="text-xl font-extrabold text-brand-600">${rp(p.p)}</span><span class="text-xs text-slate-400 line-through">${rp(p.o)}</span><span class="text-xs font-semibold text-slate-500">/ kg</span></div><button onclick="openBuy(${i})" class="w-full py-2.5 rounded-xl bg-slate-100 hover:bg-brand-600 hover:text-white text-slate-700 font-bold text-xs sm:text-sm transition-colors flex items-center justify-center gap-2"><i data-i="cartplus"></i> Beli Sekarang</button></div></div></div>`).join('');
+fbox.addEventListener('click',e=>{const b=e.target.closest('.fbtn');if(!b)return;fbox.querySelectorAll('.fbtn').forEach(x=>x.className='fbtn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold '+OFF);b.className='fbtn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold '+ON;const f=b.dataset.f;grid.querySelectorAll('.pcard').forEach(c=>c.style.display=(f==='all'||c.dataset.c===f)?'flex':'none')});
+
+const TR=[['Cabai Merah Keriting','bg-red-500',22000,38000,32000,'bg-emerald-100 text-emerald-800','up','Stabil Naik'],['Bawang Merah Brebes','bg-amber-500',18000,32000,28000,'bg-amber-100 text-amber-800','lr','Stabil'],['Tomat Beef Organik','bg-red-500',8000,18000,14500,'bg-emerald-100 text-emerald-800','up','Naik'],['Kentang Granola','bg-amber-500',10000,20000,16000,'bg-blue-100 text-blue-800','down','Stabil Turun']];
+const prows=document.getElementById('prows');
+prows.innerHTML=TR.map(r=>`<tr class="prow hover:bg-slate-50 transition-colors"><td class="py-4 px-6 font-bold text-slate-900"><span class="inline-flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full ${r[1]}"></span> ${r[0]}</span></td><td class="py-4 px-6 text-slate-500">${rp(r[2])} / kg</td><td class="py-4 px-6 text-slate-700">${rp(r[3])} / kg</td><td class="py-4 px-6 font-bold text-brand-700 bg-emerald-50/30">${rp(r[4])} / kg</td><td class="py-4 px-6 text-center"><span class="px-2.5 py-1 rounded-full text-xs font-bold ${r[5]}"><i data-i="${r[6]}" class="mr-1"></i> ${r[7]}</span></td></tr>`).join('');
+document.getElementById('psearch').addEventListener('input',e=>{const q=e.target.value.toLowerCase();prows.querySelectorAll('.prow').forEach(r=>r.style.display=r.textContent.toLowerCase().includes(q)?'':'none')});
+
+const AU=[{t:'1 Lot Tomat Beef Fresh Grade A',v:'500 Kg',f:'Poktan Lembang Berkah',s:10000,h:12500,l:'Harga Awal',sec:9912},{t:'1 Ton Cabai Merah Keriting',v:'1.000 Kg',f:'Gabungan Tani Garut Selatan',s:25000,h:29000,l:'Harga Awal',sec:18760},{t:'2 Ton Kentang Granola Super',v:'2.000 Kg',f:'Koperasi Tani Dieng Mandiri',s:12000,soon:1,sec:43200}];
+const hms=s=>[Math.floor(s/3600),Math.floor(s%3600/60),s%60].map(x=>String(x).padStart(2,'0')).join(':');
+document.getElementById('auctions').innerHTML=AU.map((a,i)=>`<div class="bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden flex flex-col justify-between"><div class="p-6"><div class="flex justify-between items-start mb-4">${a.soon?'<span class="px-3 py-1 bg-brand-500/20 text-brand-400 border border-brand-500/30 rounded-full text-xs font-bold"><i data-i="clock" class="mr-1"></i> Segera Hadir</span>':'<span class="px-3 py-1 bg-accent-500/20 text-accent-400 border border-accent-500/30 rounded-full text-xs font-bold flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-accent-500 animate-ping"></span> Lelang Aktif</span>'}<span class="text-xs text-slate-400"><i data-i="weight" class="mr-1"></i> Vol: <strong>${a.v}</strong></span></div><h3 class="text-lg font-bold text-white mb-2">${a.t}</h3><p class="text-xs text-slate-400 mb-4"><i data-i="user" class="mr-1"></i> ${a.f}</p><div class="bg-slate-900/60 p-4 rounded-xl border border-slate-700/60 space-y-2 mb-4"><div class="flex justify-between text-xs"><span class="text-slate-400">${a.soon?'Harga Pembukaan':'Harga Awal'}:</span><span class="text-slate-300">${rp(a.s)} / kg</span></div><div class="flex justify-between text-sm font-bold"><span class="text-slate-200">${a.soon?'Status':'Penawaran Tertinggi'}:</span>${a.soon?'<span class="text-brand-400">Menunggu Verifikasi Panen</span>':`<span id="hb${i}" class="text-accent-400">${rp(a.h)} / kg</span>`}</div></div><div class="text-center py-2 bg-slate-700/40 rounded-lg text-xs font-mono text-slate-300">${a.soon?'Dimulai Dalam':'Sisa Waktu'}: <span class="text-white font-bold" id="tm${i}">${hms(a.sec)}</span></div></div><div class="p-6 bg-slate-800/80 border-t border-slate-700">${a.soon?'<button disabled class="w-full py-3 rounded-xl bg-slate-700 text-slate-400 font-bold text-sm cursor-not-allowed">Belum Dibuka</button>':`<button onclick="openBid(${i})" class="w-full py-3 rounded-xl bg-accent-500 hover:bg-accent-600 text-slate-950 font-extrabold text-sm transition-colors flex items-center justify-center gap-2"><i data-i="gavel"></i> Ajukan Penawaran</button>`}</div></div>`).join('');
+setInterval(()=>AU.forEach((a,i)=>{if(a.sec>0)a.sec--;const e=document.getElementById('tm'+i);if(e)e.textContent=hms(a.sec)}),1000);
+
+/* dashboard live */
+const LI=[['Cabai rawit',62000,55000],['Cabai merah keriting',45000,41000],['Tomat',12000,10500],['Bawang merah',38000,35000],['Bawang putih',36000,34500],['Kentang',17000,15500]].map(x=>({n:x[0],f:x[1],m:x[2],b:x[1],h:Array.from({length:12},()=>x[1]*(1+(Math.random()-.5)*.06))}));
+function lspark(h){const mn=Math.min(...h),mx=Math.max(...h),r=(mx-mn)||1;return '<svg viewBox="0 0 90 28" class="w-[90px] h-7" aria-hidden="true"><polyline points="'+h.map((v,k)=>(k*90/(h.length-1)).toFixed(1)+','+(26-(v-mn)/r*22).toFixed(1)).join(' ')+'" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'}
+function ldraw(){document.getElementById('lrows').innerHTML=LI.map(i=>{const d=(i.f-i.b)/i.b*100,u=d>=0;return '<tr class="text-[15px]"><td class="py-4 px-2 font-semibold text-slate-900">'+i.n+'</td><td class="py-4 px-2 tabular-nums">'+rp(Math.round(i.f))+'</td><td class="py-4 px-2 tabular-nums">'+rp(Math.round(i.m))+'</td><td class="py-4 px-2"><span class="px-2.5 py-1 rounded-full text-sm font-semibold '+(u?'bg-brand-100 text-brand-700':'bg-orange-100 text-orange-700')+'">'+(u?'▲ ':'▼ ')+Math.abs(d).toFixed(1)+'%</span></td><td class="py-4 px-2">'+lspark(i.h)+'</td></tr>'}).join('')}
+ldraw();
+setInterval(()=>{LI.forEach(i=>{i.f=Math.max(i.b*.9,Math.min(i.b*1.1,i.f*(1+(Math.random()-.5)*.02)));i.m*=1+(Math.random()-.5)*.01;i.h.push(i.f);i.h.shift()});ldraw()},3000);
+let lp=11800;const lb=[['CV Segar Jaya',11800],['Resto Sunda Rasa',11700],['Bu Rina, Cimahi',11500]];
+function lbd(){document.getElementById('lbids').innerHTML=lb.slice(0,4).map((b,k)=>'<li class="flex justify-between px-3 py-2 rounded-lg '+(k?'bg-slate-50':'bg-slate-50 text-slate-900 font-semibold ring-2 ring-brand-600')+'"><span>'+b[0]+'</span><span>'+rp(b[1])+'</span></li>').join('');document.getElementById('lnow').textContent=rp(lp)}
+lbd();
+document.getElementById('lbtn').onclick=()=>{lp+=100;lb.unshift(['Anda',lp]);lbd()};
+const lend=Date.now()+(2*3600+14*60+30)*1000;
+function ltick(){const s=Math.max(0,Math.floor((lend-Date.now())/1000)),p=x=>String(x).padStart(2,'0');document.getElementById('l-h').textContent=p(Math.floor(s/3600));document.getElementById('l-m').textContent=p(Math.floor(s%3600/60));document.getElementById('l-s').textContent=p(s%60)}
+ltick();setInterval(ltick,1000);
+/* bar dampak */
+(function(){const sh=document.getElementById('share'),f=()=>sh.querySelectorAll('[data-w]').forEach(e=>e.style.width=e.dataset.w+'%');'IntersectionObserver' in window?new IntersectionObserver((en,o)=>{if(en[0].isIntersecting){f();o.disconnect()}},{threshold:.4}).observe(sh):f()})();
+/* tab gabung */
+const JC={F:[['Pasang produk dan tentukan harga sendiri','Ikut lelang untuk panen partai besar','Pantau harga pasar sebelum menjual'],'Daftar sebagai petani'],B:[['Beli sayur segar langsung dari kebun','Ikut lelang untuk kebutuhan grosir','Bandingkan harga dengan pasar hari ini'],'Daftar sebagai pembeli']};
+function jtab(k){document.getElementById('jF').className='px-6 py-2.5 rounded-full font-semibold '+(k==='F'?'bg-white text-brand-800':'');document.getElementById('jB').className='px-6 py-2.5 rounded-full font-semibold '+(k==='B'?'bg-white text-brand-800':'');document.getElementById('jF').setAttribute('aria-selected',k==='F');document.getElementById('jB').setAttribute('aria-selected',k==='B');document.getElementById('jpts').innerHTML=JC[k][0].map(t=>'<li>'+t+'</li>').join('');document.getElementById('jcta').textContent=JC[k][1]}
+document.getElementById('jF').onclick=()=>jtab('F');document.getElementById('jB').onclick=()=>jtab('B');jtab('F');
+
+icons();
+const $=id=>document.getElementById(id);
+$('mbtn').onclick=()=>$('mmenu').classList.toggle('hidden');
+$('mmenu').addEventListener('click',e=>{if(e.target.tagName==='A')$('mmenu').classList.add('hidden')});
+function toast(t){const e=$('toast');e.textContent=t;e.classList.remove('hidden');clearTimeout(toast.k);toast.k=setTimeout(()=>e.classList.add('hidden'),3200)}
+function openM(id){$(id).classList.remove('hidden');$(id).classList.add('flex')}
+function closeM(id){$(id).classList.add('hidden');$(id).classList.remove('flex')}
+function openBuy(i){const p=PR[i];$('m-title').textContent=p.n;$('m-price').textContent=rp(p.p)+' / kg';$('m-farmer').innerHTML='Petani: '+p.f+' ('+p.loc.split(',')[0]+')';$('m-img').src=IMG[i];openM('bm')}
+function confirmOrder(){closeM('bm');toast('Pesanan berhasil dibuat! Langsung terhubung dengan petani.')}
+let cur=null;
+function openBid(i){cur=i;$('b-title').textContent=AU[i].t+' ('+AU[i].v+')';$('b-cur').textContent=rp(AU[i].h)+' / kg';$('b-err').classList.add('hidden');$('b-in').value='';openM('bd')}
+function submitBid(){const v=parseInt($('b-in').value,10),er=$('b-err');if(!v||v<=AU[cur].h){er.textContent='Masukkan penawaran yang lebih tinggi dari '+rp(AU[cur].h)+' / kg.';er.classList.remove('hidden');return}AU[cur].h=v;$('hb'+cur).textContent=rp(v)+' / kg';closeM('bd');toast('Penawaran Anda '+rp(v)+' / kg berhasil diajukan!')}
+$('nlbtn').onclick=()=>{const m=$('nlmail');if(/^\S+@\S+\.\S+$/.test(m.value)){toast('Terima kasih! Kabar panen akan dikirim ke email Anda.');m.value=''}else toast('Masukkan alamat email yang valid.')};
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeM('bm');closeM('bd')}});
+</script>
+</body>
+</html>
